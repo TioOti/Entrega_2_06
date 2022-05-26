@@ -1,0 +1,113 @@
+
+body{
+	font-weight: 400;
+	font-family: 'Raleway', sans-serif;
+    background-color: #212529;
+    border-bottom: $color-footer-hover solid 4.5px;
+}
+
+/*================ HEADER =========================*/
+.navbar{
+	img{
+	width: 90px;
+	border-radius: 90px;
+        @media all and (max-width: 400px){
+        width: 40px; 
+        }
+        @media all and (max-width: 576px){
+        width: 65px;
+        }
+    }
+	& li{
+		&:hover{	
+			background-color: #7c7c7cad;
+			font-weight: 700;
+			border: 1px black solid;			
+			border-radius: 20px;
+			}
+		}
+}
+
+/*================ BANNER PRESENTACION =========================*/
+#banner{
+   img{
+	width: 732px; 
+    }
+
+}
+/*================ CAROUSEL =========================*/
+.row{
+	margin: 1rem 1rem 0 0 ;
+	padding: 2rem 0;
+}
+.carousel-item{
+	padding: 0% 10%;
+    img{
+        @media all and (min-width: 1440px){ 
+            padding: 0 20%;
+        }  
+    }
+   
+}
+
+/*================STAFF CARDS=========================*/
+.socials_staff{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+
+	& img{
+	width: 70px;	
+	}
+}
+#staff_cards .row{
+	margin: 1rem ;
+	& img{
+	border-radius: 10px;
+	}
+}
+
+/*================ CARDS NOVEDADES =========================*/
+#novedades{
+ 	img{
+	width: 430px;
+	height: 250px;
+	}
+	& h3{
+		font-weight: 600;
+	}
+}
+
+/*===========================================================================-->
+<!--========== HORARIOS ====================================*/
+#horarios{
+	span{
+        color: $color-footer-hover;
+    }
+	img{
+	max-height: 600px;
+	}
+	a{
+		&:hover{
+			transform: scale(1.2);
+			opacity: 0.5;
+		}
+	}
+}
+
+/*<!--===========================================================================-->
+<!--========== FOOTER ====================================>*/
+footer{
+    border-top: $color-footer-hover solid 4.5px;
+	text-align: center;
+}
+#iconos i{
+	font-size: 2rem;
+	padding: 0 1rem;
+	color: #fafafa;
+	&:hover{
+		color: $color-footer-hover;
+	}
+}
+
+

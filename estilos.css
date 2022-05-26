@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;900&display=swap');
+
+body{
+	font-weight: 400;
+	font-family: 'Raleway', sans-serif;
+}
+/*================ HEADER =========================*/
+
+.navbar-brand img{
+	width: 90px;
+	border-radius: 90px;
+}
+
+
+/*================ BANNER PRESENTACION =========================*/
+#banner img{
+	width: 732px;
+}
+/*================ CAROUSEL =========================*/
+.carousel-item img{
+	size: auto;
+	max-width: 500px;
+	max-height: 500px;
+	justify-content: center;
+	text-align: center;
+
+}
+/*================ CARDS NOVEDADES =========================*/
+
+
+/*================STAFF CARDS=========================*/
+.socials_staff{
+	display: flex;
+	flex-direction: row;
+	justify-content: safe center;
+}
+.socials_staff img{
+	width: 70px;
+	margin-top: 5rem;
+}
+/*<!--===========================================================================-->
+<!--========== FOOTER ====================================-->
+<!--===========================================================================--> */
+footer{
+	text-align: center;
+}
+#iconos i{
+	font-size: 2rem;
+	padding: 0 1rem;
+	color: #fafafa;
+}
+
+
+
+/*<!--===========================================================================-->
+<!--========== MEDIA-Q ====================================-->
+<!--===========================================================================--> */
+@media all and (max-width: 400px){
+	.navbar-brand img{
+	width: 40px;
+	}
+}
+@media all and (max-width: 320px){
+}
+
+@media all and (max-width: 576px){
+	.navbar-brand img{
+	width: 65px;
+	}
+	#header .navbar .container-fluid .span{
+	font-size: .5rem !important;
+	}
+}
+@media all and (max-width: 768px){
+}
+@media all and (max-width: 992px){
+	.card{
+	max-width: 540px;
+	}	
+}
+@media all and (max-width: 1200px){
+}
+
+/*<!--===========================================================================-->
+<!--========== HOVER ====================================-->
+<!--===========================================================================--> */
+	header nav ul li:hover{	
+	background-color: white;
+	border: 1px black solid;
+	font-weight: 700;
+	border-radius: 20px;
+	margin-right: 10px ;
+	color: whitesmoke;
+}
+	#iconos i:hover{
+	color: cyan;
+}

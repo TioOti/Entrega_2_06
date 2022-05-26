@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;900&display=swap");
+body {
+  font-weight: 400;
+  font-family: 'Raleway', sans-serif;
+  background-color: #212529;
+  border-bottom: #0d6efd solid 4.5px;
+}
+
+/*================ HEADER =========================*/
+.navbar img {
+  width: 90px;
+  border-radius: 90px;
+}
+
+@media all and (max-width: 400px) {
+  .navbar img {
+    width: 40px;
+  }
+}
+
+@media all and (max-width: 576px) {
+  .navbar img {
+    width: 65px;
+  }
+}
+
+.navbar li:hover {
+  background-color: #7c7c7cad;
+  font-weight: 700;
+  border: 1px black solid;
+  border-radius: 20px;
+}
+
+/*================ BANNER PRESENTACION =========================*/
+#banner img {
+  width: 732px;
+}
+
+/*================ CAROUSEL =========================*/
+.row {
+  margin: 1rem 1rem 0 0;
+  padding: 2rem 0;
+}
+
+.carousel-item {
+  padding: 0% 10%;
+}
+
+@media all and (min-width: 1440px) {
+  .carousel-item img {
+    padding: 0 20%;
+  }
+}
+
+/*================STAFF CARDS=========================*/
+.socials_staff {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.socials_staff img {
+  width: 70px;
+}
+
+#staff_cards .row {
+  margin: 1rem;
+}
+
+#staff_cards .row img {
+  border-radius: 10px;
+}
+
+/*================ CARDS NOVEDADES =========================*/
+#novedades img {
+  width: 430px;
+  height: 250px;
+}
+
+#novedades h3 {
+  font-weight: 600;
+}
+
+/*===========================================================================-->
+<!--========== HORARIOS ====================================*/
+#horarios span {
+  color: #0d6efd;
+}
+
+#horarios img {
+  max-height: 600px;
+}
+
+#horarios a:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  opacity: 0.5;
+}
+
+/*<!--===========================================================================-->
+<!--========== FOOTER ====================================>*/
+footer {
+  border-top: #0d6efd solid 4.5px;
+  text-align: center;
+}
+
+#iconos i {
+  font-size: 2rem;
+  padding: 0 1rem;
+  color: #fafafa;
+}
+
+#iconos i:hover {
+  color: #0d6efd;
+}
+/*# sourceMappingURL=estilos.css.map */
