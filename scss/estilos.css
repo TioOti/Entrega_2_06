@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;900&display=swap");
+.socials_staff #iconos i, .socials_staff1 #iconos i, .socials_staff2 #iconos i, .socials_staff3 #iconos i, .socials_staff4 #iconos i {
+  font-size: 2rem;
+  padding: 0 1rem;
+  color: blue;
+}
+
+.socials_staff #iconos i:hover, .socials_staff1 #iconos i:hover, .socials_staff2 #iconos i:hover, .socials_staff3 #iconos i:hover, .socials_staff4 #iconos i:hover {
+  color: #0d6efd;
+}
+
+body {
+  font-weight: 400;
+  font-family: 'Raleway', sans-serif;
+  background-color: #212529;
+  border-bottom: #0d6efd solid 4.5px;
+}
+
+/*================ HEADER =========================*/
+#header img {
+  width: 500px;
+}
+
+@media all and (max-width: 576px) {
+  #header img {
+    width: 355px;
+  }
+}
+
+@media all and (max-width: 400px) {
+  #header img {
+    width: 250px;
+  }
+}
+
+#header li:hover {
+  background-color: #888888;
+  font-weight: 700;
+  border: 1px black solid;
+  border-radius: 20px;
+}
+
+#header li a {
+  color: white;
+}
+
+/*================ CAROUSEL =========================*/
+.carousel-item {
+  height: 22rem;
+  width: 100%;
+  background: #888888;
+  color: #fafafa;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+}
+
+@media all and (max-width: 576px) {
+  .carousel-item {
+    height: 17rem;
+  }
+}
+
+.carousel-item img {
+  width: 100%;
+}
+
+.carousel-item .container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-bottom: 3rem;
+}
+
+/*================STAFF CARDS=========================*/
+.socials_staff1 {
+  background-color: red;
+}
+
+.socials_staff2 {
+  background-color: green;
+}
+
+.socials_staff3 {
+  background-color: violet;
+}
+
+.socials_staff4 {
+  background-color: darkblue;
+}
+
+#staff_cards .row {
+  margin: 1rem;
+}
+
+#staff_cards .row img {
+  border-radius: 10px;
+}
+
+/*================ CARDS NOVEDADES =========================*/
+#novedades img {
+  width: 430px;
+  height: 250px;
+}
+
+#novedades h3 {
+  font-weight: 600;
+}
+
+#novedades .card {
+  max-width: 400px;
+  max-height: 450px;
+}
+
+/*===========================================================================-->
+<!--========== HORARIOS ====================================*/
+#horarios span {
+  color: #0d6efd;
+}
+
+#horarios img {
+  max-height: 600px;
+}
+
+#horarios a:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  opacity: 0.5;
+}
+
+/*============== FORMULARIO ===============================================*/
+section span {
+  color: #0d6efd;
+}
+
+section #formulario_ {
+  color: #212529;
+}
+
+section #formulario_ iframe {
+  width: 100%;
+}
+
+section ul {
+  list-style: none;
+}
+
+section ul li {
+  margin-bottom: 1.3rem;
+}
+
+.btn-wsp img {
+  z-index: 100;
+  position: fixed;
+  width: 3rem;
+  right: 1.3rem;
+  bottom: 5rem;
+}
+
+@media all and (min-width: 768px) {
+  .btn-wsp img {
+    width: 3.2rem;
+  }
+}
+
+/*<!--===========================================================================-->
+<!--========== FOOTER ====================================>*/
+#footer {
+  border-top: #0d6efd solid 4.5px;
+  text-align: center;
+}
+
+#footer #iconos i {
+  font-size: 2rem;
+  padding: 0 1rem;
+  color: #fafafa;
+}
+
+#footer #iconos i:hover {
+  color: #0d6efd;
+}
+/*# sourceMappingURL=estilos.css.map */
