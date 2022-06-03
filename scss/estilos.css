@@ -2,7 +2,7 @@
 .socials_staff #iconos i, .socials_staff1 #iconos i, .socials_staff2 #iconos i, .socials_staff3 #iconos i, .socials_staff4 #iconos i {
   font-size: 2rem;
   padding: 0 1rem;
-  color: blue;
+  color: #fafafa;
 }
 
 .socials_staff #iconos i:hover, .socials_staff1 #iconos i:hover, .socials_staff2 #iconos i:hover, .socials_staff3 #iconos i:hover, .socials_staff4 #iconos i:hover {
@@ -74,20 +74,20 @@ body {
 }
 
 /*================STAFF CARDS=========================*/
-.socials_staff1 {
-  background-color: red;
+.socials_staff1 #iconos i {
+  color: #35bf98;
 }
 
-.socials_staff2 {
-  background-color: green;
+.socials_staff2 #iconos i {
+  color: green;
 }
 
-.socials_staff3 {
-  background-color: violet;
+.socials_staff3 #iconos i {
+  color: #a12fa1;
 }
 
-.socials_staff4 {
-  background-color: darkblue;
+.socials_staff4 #iconos i {
+  color: #c1df1a;
 }
 
 #staff_cards .row {
