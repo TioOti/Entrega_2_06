@@ -1,3 +1,6 @@
+@import "mixins";
+@import "clases-aux";
+@import "variables";
 
 body{
 	font-weight: 400;
@@ -7,59 +10,64 @@ body{
 }
 
 /*================ HEADER =========================*/
-.navbar{
+#header{
 	img{
-	width: 90px;
-	border-radius: 90px;
-        @media all and (max-width: 400px){
-        width: 40px; 
+	width: 500px; 
+		@media all and (max-width: 576px){
+        width: 355px;
         }
-        @media all and (max-width: 576px){
-        width: 65px;
+        @media all and (max-width: 400px){
+        width: 250px; 
         }
     }
 	& li{
-		&:hover{	
-			background-color: #7c7c7cad;
+		&:hover{
+			background-color: #888888;
 			font-weight: 700;
-			border: 1px black solid;			
+			border: 1px black solid;
 			border-radius: 20px;
 			}
+		a{
+			color: white;
+		}	
 		}
 }
 
-/*================ BANNER PRESENTACION =========================*/
-#banner{
-   img{
-	width: 732px; 
-    }
-
-}
 /*================ CAROUSEL =========================*/
-.row{
-	margin: 1rem 1rem 0 0 ;
-	padding: 2rem 0;
-}
 .carousel-item{
-	padding: 0% 10%;
-    img{
-        @media all and (min-width: 1440px){ 
-            padding: 0 20%;
-        }  
-    }
-   
+	height: 22rem;
+	width: 100%;
+	background: #888888;
+	color: #fafafa;
+	position: relative;
+	background-position: center;
+	background-size: cover;
+	@media all and (max-width: 576px){
+        height: 17rem;	
+        }
+		img{
+		width: 100%;
+		}
+	
+	.container{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		padding-bottom: 3rem;
+	}
 }
 
 /*================STAFF CARDS=========================*/
-.socials_staff{
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
 
-	& img{
-	width: 70px;	
+@for $i from 1 through 4{
+	.socials_staff#{$i}{
+		@extend .socials_staff; #iconos i{		
+		color: map-get($colores_social, $i);
+	}
 	}
 }
+
 #staff_cards .row{
 	margin: 1rem ;
 	& img{
@@ -69,6 +77,8 @@ body{
 
 /*================ CARDS NOVEDADES =========================*/
 #novedades{
+
+
  	img{
 	width: 430px;
 	height: 250px;
@@ -100,19 +110,45 @@ body{
 	}
 }
 
-/*<!--===========================================================================-->
-<!--========== FOOTER ====================================>*/
-footer{
-    border-top: $color-footer-hover solid 4.5px;
-	text-align: center;
-}
-#iconos i{
-	font-size: 2rem;
-	padding: 0 1rem;
-	color: #fafafa;
-	&:hover{
+/*============== FORMULARIO ===============================================*/
+section{
+	span{
 		color: $color-footer-hover;
+	}
+	#formulario_{
+		color: #212529;
+		iframe{
+			width: 100%;
+			
+		}
+	}
+	ul{
+		list-style: none;
+		li{
+			margin-bottom: 1.3rem;
+		}
 	}
 }
 
+.btn-wsp {
+    img {
+        z-index: 100;
+        position: fixed;
+        width: 3rem;
+        right: 1.3rem;
+        bottom: 5rem;
+        @media all and (min-width: 768px) {
+            width: 3.2rem;
+        }
+    }
+}
 
+/*<!--===========================================================================-->
+<!--========== FOOTER ====================================>*/
+#footer{
+    border-top: $color-footer-hover solid 4.5px;
+	text-align: center;
+	#iconos i{
+		@include links;
+		}
+	}

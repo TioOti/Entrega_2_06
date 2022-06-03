@@ -1,0 +1,8 @@
+@mixin links{
+    font-size: 2rem;
+    padding: 0 1rem;
+    color: #fafafa;
+    &:hover{
+        color: $color-footer-hover;
+    }
+}

@@ -1,4 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;900&display=swap");
+.socials_staff #iconos i, .socials_staff1 #iconos i, .socials_staff2 #iconos i, .socials_staff3 #iconos i, .socials_staff4 #iconos i {
+  font-size: 2rem;
+  padding: 0 1rem;
+  color: #fafafa;
+}
+
+.socials_staff #iconos i:hover, .socials_staff1 #iconos i:hover, .socials_staff2 #iconos i:hover, .socials_staff3 #iconos i:hover, .socials_staff4 #iconos i:hover {
+  color: #0d6efd;
+}
+
 body {
   font-weight: 400;
   font-family: 'Raleway', sans-serif;
@@ -7,67 +17,77 @@ body {
 }
 
 /*================ HEADER =========================*/
-.navbar img {
-  width: 90px;
-  border-radius: 90px;
-}
-
-@media all and (max-width: 400px) {
-  .navbar img {
-    width: 40px;
-  }
+#header img {
+  width: 500px;
 }
 
 @media all and (max-width: 576px) {
-  .navbar img {
-    width: 65px;
+  #header img {
+    width: 355px;
   }
 }
 
-.navbar li:hover {
-  background-color: #7c7c7cad;
+@media all and (max-width: 400px) {
+  #header img {
+    width: 250px;
+  }
+}
+
+#header li:hover {
+  background-color: #888888;
   font-weight: 700;
   border: 1px black solid;
   border-radius: 20px;
 }
 
-/*================ BANNER PRESENTACION =========================*/
-#banner img {
-  width: 732px;
+#header li a {
+  color: white;
 }
 
 /*================ CAROUSEL =========================*/
-.row {
-  margin: 1rem 1rem 0 0;
-  padding: 2rem 0;
-}
-
 .carousel-item {
-  padding: 0% 10%;
+  height: 22rem;
+  width: 100%;
+  background: #888888;
+  color: #fafafa;
+  position: relative;
+  background-position: center;
+  background-size: cover;
 }
 
-@media all and (min-width: 1440px) {
-  .carousel-item img {
-    padding: 0 20%;
+@media all and (max-width: 576px) {
+  .carousel-item {
+    height: 17rem;
   }
 }
 
-/*================STAFF CARDS=========================*/
-.socials_staff {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.carousel-item img {
+  width: 100%;
 }
 
-.socials_staff img {
-  width: 70px;
+.carousel-item .container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-bottom: 3rem;
+}
+
+/*================STAFF CARDS=========================*/
+.socials_staff1 #iconos i {
+  color: #35bf98;
+}
+
+.socials_staff2 #iconos i {
+  color: green;
+}
+
+.socials_staff3 #iconos i {
+  color: #a12fa1;
+}
+
+.socials_staff4 #iconos i {
+  color: #c1df1a;
 }
 
 #staff_cards .row {
@@ -109,20 +129,55 @@ body {
   opacity: 0.5;
 }
 
+/*============== FORMULARIO ===============================================*/
+section span {
+  color: #0d6efd;
+}
+
+section #formulario_ {
+  color: #212529;
+}
+
+section #formulario_ iframe {
+  width: 100%;
+}
+
+section ul {
+  list-style: none;
+}
+
+section ul li {
+  margin-bottom: 1.3rem;
+}
+
+.btn-wsp img {
+  z-index: 100;
+  position: fixed;
+  width: 3rem;
+  right: 1.3rem;
+  bottom: 5rem;
+}
+
+@media all and (min-width: 768px) {
+  .btn-wsp img {
+    width: 3.2rem;
+  }
+}
+
 /*<!--===========================================================================-->
 <!--========== FOOTER ====================================>*/
-footer {
+#footer {
   border-top: #0d6efd solid 4.5px;
   text-align: center;
 }
 
-#iconos i {
+#footer #iconos i {
   font-size: 2rem;
   padding: 0 1rem;
   color: #fafafa;
 }
 
-#iconos i:hover {
+#footer #iconos i:hover {
   color: #0d6efd;
 }
 /*# sourceMappingURL=estilos.css.map */

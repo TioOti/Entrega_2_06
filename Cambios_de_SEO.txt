@@ -1,0 +1,13 @@
+INDESX.HTML{
+	Adicion de seccion "myCarousel"
+	h1 SOMOS COTA ESTUDIO
+	h2 Más que solo un estudio de Tatuajes
+
+		-CARDS NOVEDADES-
+	div por h3
+	div por h4
+	div por p
+
+
+
+
