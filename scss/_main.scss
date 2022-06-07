@@ -1,6 +1,7 @@
 @import "mixins";
 @import "clases-aux";
 @import "variables";
+@import "fuentes";
 
 body{
 	font-weight: 400;
@@ -10,81 +11,153 @@ body{
 }
 
 /*================ HEADER =========================*/
-#header{
-	img{
-	width: 500px; 
-		@media all and (max-width: 576px){
-        width: 355px;
-        }
-        @media all and (max-width: 400px){
-        width: 250px; 
-        }
-    }
-	& li{
-		&:hover{
-			background-color: #888888;
+header{
+		background-color: black;
+		text-align: center;
+		h2{
+			font-size: 1.5rem;
 			font-weight: 700;
-			border: 1px black solid;
-			border-radius: 20px;
-			}
-		a{
-			color: white;
-		}	
+			color: #fafafa;
+			padding: 1rem;
+			margin-top: 0;
+			margin-bottom: 0;
+			@media all and (max-width: 576px){
+				font-size: 1rem;
+				font-weight: 700;
+				}
 		}
+	}
+#header{	
+.navbar{
+	background-color: rgba(33, 37, 41, .85);
+	@media all and (max-width: 990px){
+		background-color: rgba(33, 37, 41, 1);
+		}
+}
+img{
+width: 500px; 
+	@media all and (max-width: 576px){
+	width: 355px;
+	}
+	@media all and (max-width: 450px){
+	width: 285px; 
+	}
+	@media all and (max-width: 375px){
+	width: 255px; 
+	}
+	@media all and (max-width: 375px){
+	width: 200px; 
+	}
+}
+& li{
+	transition: 200ms;
+	a{
+		color: #fafafa;
+	}
+	&:hover{
+		font-weight: 700;
+		border: 1px black solid;
+		border-radius: 20px;		
+			a{
+				color: rgb(17, 162, 219);
+			}	
+		}
+	}
 }
 
 /*================ CAROUSEL =========================*/
-.carousel-item{
-	height: 22rem;
-	width: 100%;
-	background: #888888;
-	color: #fafafa;
-	position: relative;
-	background-position: center;
-	background-size: cover;
-	@media all and (max-width: 576px){
-        height: 17rem;	
-        }
-		img{
+#myCarousel{
+	a{
+		margin-top: 1rem;
+	}
+	h1{
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 800;
+		font-size: 4rem;
+		@media all and (max-width: 576px){
+			font-size: 2rem;	
+			}		
+	}
+	.carousel-item{
+		height: 25rem;
 		width: 100%;
+		background: #888888;
+		color: #fafafa;
+		position: relative;
+		background-position: center;
+		background-size: cover;
+		@media all and (max-width: 576px){
+			height: 17rem;	
+			}
+			img{
+			width: 100%;
+			}		
+		.container{
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			padding-bottom: 3rem;
 		}
-	
-	.container{
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		padding-bottom: 3rem;
 	}
 }
-
 /*================STAFF CARDS=========================*/
-
+#cards_integrantes{
+	h2{
+		@extend .separador;
+		text-transform: uppercase;
+	}
+}
+#banner{
+	h3{
+		font-size: 2.2rem;
+	}
+	p{
+		font-size: 1.3rem;
+		strong{
+			font-size: 1.4rem;
+		}
+		@media all and (max-width: 576px){
+			font-size: .9rem;
+		}
+	}
+	img{
+		border-radius: 50%;
+		width: 600px;
+		@media all and (max-width: 576px){
+			width: 450px;			
+			margin-bottom: 1rem;
+		}
+	}
+} 
 @for $i from 1 through 4{
 	.socials_staff#{$i}{
-		@extend .socials_staff; #iconos i{		
+		@extend .socials_staff; 
+		#iconos i{		
 		color: map-get($colores_social, $i);
-	}
+		transition: 200ms;
+		&:hover{
+			transform: perspective();
+			color: map-get($hover_social, $i);
+		}
+		}
 	}
 }
-
 #staff_cards .row{
 	margin: 1rem ;
-	& img{
+	img{
 	border-radius: 10px;
 	}
 }
-
 /*================ CARDS NOVEDADES =========================*/
 #novedades{
-
-
- 	img{
+	img{
 	width: 430px;
 	height: 250px;
 	}
 	& h3{
-		font-weight: 600;
+		@extend .separador;
+		margin-bottom: 1rem;
 	}
 	& .card{
 		max-width: 400px;
@@ -96,30 +169,73 @@ body{
 /*===========================================================================-->
 <!--========== HORARIOS ====================================*/
 #horarios{
+	padding: 0;
+	.contenedor_horarios{
+	margin-top: 2rem
+	}	
+	h5{
+	@extend .separador;
+	}
 	span{
-        color: $color-footer-hover;
+    color: $color-footer-hover;
     }
 	img{
 	max-height: 600px;
 	}
 	a{
+		transition: 500ms;
 		&:hover{
 			transform: scale(1.2);
 			opacity: 0.5;
 		}
 	}
 }
-
+/*============== GALERIA ===============================================*/
+	#galeria{
+		img {
+		max-width: 100%;
+		}
+	}
+@for $i from 1 through 4{
+	.gallery#{$i}{
+		@extend .gallery;
+		img{	
+			background-color: map-get($hover_social, $i);
+				&:hover{
+					transform: scale(1.1);
+					background-color: map-get($hover_social_deg, $i);
+				}
+			}
+		}
+	}
+@for $i from 1 through 4{
+	.titulo_gallery#{$i}{
+		@extend .separador;
+		font-size: 2rem;
+		@media all and (max-width: 576px){
+			font-size: 1.5rem;
+		}
+	}
+}
 /*============== FORMULARIO ===============================================*/
 section{
+	form{
+		background-color: rgba(0, 0, 0, .4);
+		border-radius: 9px;
+		margin-bottom: 1.6rem;
+		border: 1px solid #fafafa;
+	}
+	h1{
+		@extend .separador;
+	}
 	span{
 		color: $color-footer-hover;
 	}
-	#formulario_{
+	#formulario_{		
 		color: #212529;
 		iframe{
-			width: 100%;
-			
+		width: 100%;
+						
 		}
 	}
 	ul{
@@ -129,7 +245,6 @@ section{
 		}
 	}
 }
-
 .btn-wsp {
     img {
         z-index: 100;
@@ -142,9 +257,43 @@ section{
         }
     }
 }
-
-/*<!--===========================================================================-->
-<!--========== FOOTER ====================================>*/
+/*========== PRODUCTOS ====================================*/
+#productos{
+	transition: 200ms;
+	img{
+		width: 300px;
+		height: 300px;
+		margin: 5%;
+		padding-left: 3rem;
+	}
+	h2{
+		text-transform: uppercase;
+		margin-bottom: 1rem;
+		@extend .montserrat;
+		@extend .separador;
+	}
+	h5{
+		text-align: center;
+		font-weight: 700;
+		font-size: 2rem;
+		border-top: #212529 solid 1px;
+		border-bottom: #212529 solid 1px;
+	}
+	h6{
+		@extend .precios;
+	}
+	.card-footer{
+		text-align: center;
+	}
+	button{
+		&:hover{
+			border: $color-footer-hover 4px solid;
+			opacity: .7;
+			transform: translateY(-5px);
+		}
+	}
+}
+/*========== FOOTER ====================================*/
 #footer{
     border-top: $color-footer-hover solid 4.5px;
 	text-align: center;
