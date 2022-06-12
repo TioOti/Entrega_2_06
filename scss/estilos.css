@@ -134,19 +134,17 @@ header h2 {
   }
 }
 
-@media all and (max-width: 375px) {
-  #header img {
-    width: 200px;
-  }
-}
-
 #header li {
-  -webkit-transition: 200ms;
-  transition: 200ms;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
 }
 
 #header li a {
-  color: #fafafa;
+  color: #ffffff;
+}
+
+#header li a .active {
+  font-weight: 700;
 }
 
 #header li:hover {
@@ -241,8 +239,8 @@ header h2 {
 
 .socials_staff1 #iconos i {
   color: #35bf98;
-  -webkit-transition: 200ms;
-  transition: 200ms;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 .socials_staff1 #iconos i:hover {
@@ -253,8 +251,8 @@ header h2 {
 
 .socials_staff2 #iconos i {
   color: #ea4e5e;
-  -webkit-transition: 200ms;
-  transition: 200ms;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 .socials_staff2 #iconos i:hover {
@@ -265,8 +263,8 @@ header h2 {
 
 .socials_staff3 #iconos i {
   color: #a12fa1;
-  -webkit-transition: 200ms;
-  transition: 200ms;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 .socials_staff3 #iconos i:hover {
@@ -277,8 +275,8 @@ header h2 {
 
 .socials_staff4 #iconos i {
   color: #c1df1a;
-  -webkit-transition: 200ms;
-  transition: 200ms;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 .socials_staff4 #iconos i:hover {
@@ -293,6 +291,22 @@ header h2 {
 
 #staff_cards .row img {
   border-radius: 10px;
+}
+
+#staff_cards h3 {
+  font-size: 3rem;
+}
+
+@media all and (max-width: 500px) {
+  #staff_cards h3 {
+    font-size: 2rem;
+  }
+}
+
+@media all and (max-width: 375px) {
+  #staff_cards h3 {
+    font-size: 1.3rem;
+  }
 }
 
 /*================ CARDS NOVEDADES =========================*/
@@ -475,8 +489,7 @@ section ul li {
 #productos img {
   width: 300px;
   height: 300px;
-  margin: 5%;
-  padding-left: 3rem;
+  margin: auto;
 }
 
 #productos h2 {
@@ -494,6 +507,11 @@ section ul li {
 
 #productos .card-footer {
   text-align: center;
+}
+
+#productos button {
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
 #productos button:hover {

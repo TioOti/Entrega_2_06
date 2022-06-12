@@ -45,14 +45,14 @@ width: 500px;
 	@media all and (max-width: 375px){
 	width: 255px; 
 	}
-	@media all and (max-width: 375px){
-	width: 200px; 
-	}
 }
 & li{
-	transition: 200ms;
+	transition: all .4s ease-in-out;
 	a{
-		color: #fafafa;
+		color: #ffffff;
+		.active{
+			font-weight: 700;
+		}
 	}
 	&:hover{
 		font-weight: 700;
@@ -133,9 +133,9 @@ width: 500px;
 @for $i from 1 through 4{
 	.socials_staff#{$i}{
 		@extend .socials_staff; 
-		#iconos i{		
+		#iconos i{
 		color: map-get($colores_social, $i);
-		transition: 200ms;
+		transition: .2s;
 		&:hover{
 			transform: perspective();
 			color: map-get($hover_social, $i);
@@ -143,10 +143,21 @@ width: 500px;
 		}
 	}
 }
-#staff_cards .row{
-	margin: 1rem ;
-	img{
-	border-radius: 10px;
+#staff_cards{
+	.row{
+		margin: 1rem ;
+		img{
+		border-radius: 10px;
+		}
+	}
+	h3{
+		font-size: 3rem;
+		@media all and (max-width: 500px){
+			font-size: 2rem;
+		}
+		@media all and (max-width: 375px){
+			font-size: 1.3rem;
+		}
 	}
 }
 /*================ CARDS NOVEDADES =========================*/
@@ -263,8 +274,7 @@ section{
 	img{
 		width: 300px;
 		height: 300px;
-		margin: 5%;
-		padding-left: 3rem;
+		margin: auto;
 	}
 	h2{
 		text-transform: uppercase;
@@ -286,6 +296,7 @@ section{
 		text-align: center;
 	}
 	button{
+		transition: all .2s ease-in-out;
 		&:hover{
 			border: $color-footer-hover 4px solid;
 			opacity: .7;
@@ -293,6 +304,8 @@ section{
 		}
 	}
 }
+
+
 /*========== FOOTER ====================================*/
 #footer{
     border-top: $color-footer-hover solid 4.5px;
